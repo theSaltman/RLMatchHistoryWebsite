@@ -1,0 +1,156 @@
+{% extends "home/base.html" %}
+{% block content %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most assists: {{ mostAssists }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostAssistsAuthor.pk %}"> {{ mostAssistsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most goals scored: {{ mostGoals }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostGoalsAuthor.pk %}">{{ mostGoalsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest ranked MMR achieved: {{ highestRankedMMR }} in {{ highestRankedMMRPlaylist }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestRankedMMRAuthor.pk %}">{{ highestRankedMMRAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest casual MMR achieved: {{ highestCasualMMR }} in {{ highestCasualMMRPlaylist }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestCasualMMRAuthor.pk %}">{{ highestCasualMMRAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most MVP's achieved: {{ mostMVP }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostMVPAuthor.pk %}">{{ mostMVPAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest points achieved: {{ highestPoints }} in {{ highestPointsPlaylist }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestPointsAuthor.pk %}">{{ highestPointsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most saves: {{ mostSaves }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostSavesAuthor.pk %}">{{ mostSavesAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most shots taken: {{ mostShots }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostShotsAuthor.pk %}">{{ mostShotsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most wins: {{ mostWins}} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostWinsAuthor.pk %}">{{ mostWinsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most losses: {{ mostLosses}} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostLossesAuthor.pk %}">{{ mostLossesAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most games played: {{ mostGames}} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostGamesAuthor.pk %}">{{ mostGamesAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest win rate: {{ highestWinPercent }}% by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestWinPercentAuthor.pk %}">{{ highestWinPercentAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest ranked win rate: {{ highestRankedWinPercent }}% by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestRankedWinPercentAuthor.pk %}">{{ highestRankedWinPercentAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most ranked wins: {{ mostRankedWins }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostRankedWinsAuthor.pk %}">{{ mostRankedWinsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Highest casual win rate: {{ highestCasualWinPercent }}% by </small>
+		      <small> <a href="{% url 'profile_pk' pk=highestCasualWinPercentAuthor.pk %}">{{ highestCasualWinPercentAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most casual wins: {{ mostCasualWins }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostCasualWinsAuthor.pk %}">{{ mostCasualWinsAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most ranked games: {{ mostRankedGames }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostRankedGamesAuthor.pk %}">{{ mostRankedGamesAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most casual games: {{ mostCasualGames }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostCasualGamesAuthor.pk %}">{{ mostCasualGamesAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <small class="text-muted">Most goals scored by a team: {{ totalMostGoalsInAGame }} in {{ mostGoalsInAGamePlaylist }} by </small>
+		      <small> <a href="{% url 'profile_pk' pk=mostGoalsInAGameAuthor.pk %}">{{ mostGoalsInAGameAuthor }} </a></small>
+		    </div>
+		  </div>
+		</article>
+{% endblock content %} 
+

@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% block content %}
+	<h1>Upload Page</h1>
+  	 {% if user.is_authenticated %}
+  	 	<ul><li>
+			Open your Bakkes Mod and click file > Open BakkesMod Folder.
+		</li><li>
+			Go to the data folder.  Copy the path in your file explorer.
+  	 	</li><li>
+  	 		Now click Choose a file and paste the path copied to your Bakkes Mod data folder
+  	 	</li><li>
+			Find a file with a string of numbers (which is your unique steam ID number) followed by _MatchHistory.csv.  For example, mine is called: 76561198069827080_MatchHistory.csv
+		</li></ul>
+		<form action="" method="POST" class="ui form" enctype="multipart/form-data"> 
+			{% csrf_token %}
+			{{ form }}
+			<button type="submit" class="ui button primary">Confirm</button>
+		</form>
+  	 {% else %}
+		<p>Please<a href="{% url 'register' %}"> create an account</a> and <a href="{% url 'login' %}">login</a> before uploading a csv file.</p>
+ {% endif %}
+
+{% endblock content %}

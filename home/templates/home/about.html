@@ -1,0 +1,24 @@
+{% extends "home/base.html" %}
+{% block content %}
+	<h1>About Page</h1>
+	<ul><li>
+		This website is a tool to look at your Rocket League statistics.
+	</li><li>
+		First, download the <a href="https://www.bakkesmod.com/download.php">Bakkes Mod</a> tool.
+	</li><li>
+		Second, download the  <a href="https://bakkesplugins.com/plugins/view/158">Rocket League Match History Bakkes Mod</a> plugin.
+	</li><li>
+		Play some matches!
+	</li> <li>
+		Navigate to the data folder.
+	</li><li>		
+		Find a file with a string of numbers (which is your unique steam ID number) followed by _MatchHistory.csv.  For example, mine is called: 76561198069827080_MatchHistory.csv
+	</li><li>
+		Now, navigate to the <a href="{% url 'upload' %}">Upload</a> page, and upload the .csv to the website.		
+	</li><li>
+		That's it!  You can now start <a href="{% url 'search' %}">searching</a> through your data!
+	</li></ul>
+{% endblock content %}
+
+
+<!--, go to your Bakkes Mod, click File, and click 'Open BakkesMod Folder'.-->

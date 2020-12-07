@@ -1,0 +1,73 @@
+{% extends "home/base.html" %}
+{% block content %}
+	<h1>{{ user.username }}</h1>
+		<ul><li>
+		      <small class="text-muted">Total goals scored: {{ mostGoals }}</small>
+		</li><li>
+		      <small class="text-muted">Total assists: {{ mostAssists }}</small>
+		</li><li>
+		      <small class="text-muted">Highest ranked MMR achieved: {{ highestRankedMMR }} in {{ highestMMRPlaylist }}</small>
+		</li><li>
+				<small class="text-muted">Highest casual MMR achieved: {{ highestCasualMMR }}</small>
+		</li><li>
+		      <small class="text-muted">Total MVP's achieved: {{ mostMVP }}</small>
+		</li><li>
+		      <small class="text-muted">Highest points achieved: {{ highestPoints }} in {{ highestPointsPlaylist }}</small>
+		</li><li>
+		      <small class="text-muted">Total saves: {{ mostSaves }}</small>
+		</li><li>
+		      <small class="text-muted">Total shots taken: {{ mostShots }}</small>
+		</li><li>
+		      <small class="text-muted">Total wins: {{ mostWins}}</small>
+		</li><li>
+		      <small class="text-muted">Total losses: {{ mostLosses}}</small>
+		</li><li>
+		      <small class="text-muted">Total games played: {{ mostGames}}</small>
+		</li><li>
+				<small class="text-muted">Win rate: {{ winPercent}}%</small>
+		</li><li>
+				<small class="text-muted">Ranked wins: {{ mostRankedWins }}</small>
+		</li><li>
+				<small class="text-muted">Ranked games: {{ mostRankedGames }}</small>
+		</li><li>
+				<small class="text-muted">Ranked win rate: {{ rankedWinPercent}}%</small>
+		</li><li>
+				<small class="text-muted">Casual wins: {{ mostCasualWins}}</small>
+		</li><li>
+				<small class="text-muted">Casual games: {{ mostCasualGames }}</small>
+		</li><li>
+				<small class="text-muted">Casual win rate: {{ casualWinPercent }}%</small>
+		</li><li>
+		      <small class="text-muted">Most goals scored by team: {{ mostGoalsInAGame }} in {{ mostGoalsInAGamePlaylist }}</small>
+		</li></ul>
+		
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<table class="table table-sm">
+						<tr>
+							<th>Goals</th>
+							<th>Assists</th>
+							<th>MMR</th>
+							<th>Playlist</th>
+							<th>MVP</th>
+							<th>Points</th>
+							<th>Saves</th>
+							<th>Shots</th>
+							<th>Win/Loss</th>
+							<th>Ranked</th>
+							<th>Time Played</th>						
+						</tr>
+						{% for i in things %}
+							<tbody><tr>
+								{% for j, k in i.items %}	
+									<td><small>{{ k }}</small></td>
+								{% endfor %}
+							</tr></tbody>
+						{% endfor %}
+					</table>
+				</div>			
+			</div>		
+		</div>
+
+{% endblock content %} 

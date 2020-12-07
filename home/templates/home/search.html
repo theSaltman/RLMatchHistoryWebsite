@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+{% block content %}
+	<h1>Search Page</h1>
+
+	<form action="{% url 'search' %}" method="get">
+	  <input name="q" type="text" placeholder="Search...">
+	</form>	
+	
+	{% if object_list is not None %}
+		<ul>
+		{% for user in object_list %}
+			<li>
+				<small> <a href="{% url 'profile_pk' pk=user.pk %}">{{ user.username }} </a></small>
+			</li>
+		{% endfor %}
+		</ul>	
+	{% else %}
+		<ul>
+		{% for user in users %}
+			<li>
+				<small> <a href="{% url 'profile_pk' pk=user.pk %}">{{ user.username }} </a></small>
+			</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock content %}
